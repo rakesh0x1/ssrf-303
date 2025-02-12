@@ -32,7 +32,7 @@ app.get("/dos", (req, res) => {
 // Route to trigger SSRF redirect (for context)
 app.get("/ssrf", (req, res) => {
   // Redirect with a 303 status code to the large-response endpoint
-  res.status(303).set("Location", `http://localhost:${PORT}/dos`).send();
+  res.status(303).set("Location", `https://ssrf-303.onrender.com/dos`).send();
   console.log("Redirecting to /dos for SSRF/DoS testing...");
 });
 
