@@ -8,7 +8,7 @@ app.get("/dos", (req, res) => {
   res.setHeader("Content-Type", "text/plain");
 
   const chunkSize = 1024; // 1KB per chunk
-  const totalBytes = 20 * 1024 * 1024 * 1024; // 20GB in bytes
+  const totalBytes = 100 * 1024 * 1024 * 1024; // 20GB in bytes
   const iterations = totalBytes / chunkSize;  // number of chunks to send
   const chunk = "A".repeat(chunkSize);          // 1KB chunk
   let counter = 0;
